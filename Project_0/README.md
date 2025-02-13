@@ -3,7 +3,7 @@
 ## Оглавление
 [1.	Описание проекта](https://github.com/JuliaSok/Temp/tree/main/Project_0/README.md#Описание-проекта)
 
-[2.	Какой кейс решаем?](https://github.com/JuliaSok/Temp/tree/main/Project_0/README.md#Какой-кейс-решаем?)
+[2.	Какой кейс решаем?](https://github.com/JuliaSok/Temp/tree/main/Project_0/README.md#Какой-кейс-решаем)
 
 [3. Краткая информация о данных](https://github.com/JuliaSok/Temp/tree/main/Project_0/README.md#Краткая-информация-о-данных)
 
@@ -30,7 +30,8 @@
 **Метрика качества**
 Результаты оцениваются по среднему количеству попыток при 1000 повторений
 
-Что практикуем Учимся писать хороший код на python
+**Что практикуем**
+Учимся писать хороший код на python
 
 ## Краткая информация о данных
 

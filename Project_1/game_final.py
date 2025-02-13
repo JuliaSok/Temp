@@ -11,20 +11,23 @@ def game_core_v3(number: int = 1) -> int:
         int: Число попыток
     """
     cnt = 0
-    l, r = a, b
-    while l <= r:
+    left, rigth = a, b
+    while left <= rigth:
         cnt += 1
-        predict = (l + r) // 2
+        predict = (left + rigth) // 2
         if predict == number:
-            return cnt
+            break
         elif predict < number:
-            l = predict + 1
+            left = predict + 1
         else:
-            r = predict - 1
+            rigth = predict - 1
+    return cnt
     
 
 def score_game(random_predict) -> int:
-    """За какое количество попыток в среднем за 10000 подходов угадывает наш алгоритм
+    """Функция для сбора статистики расчетов нашего когда.
+        Принимает функцию, выдает сообщение о максимальном, минимальном и среднем
+        количестве результатов выполнения нашего кода за 1000 запусков
 
     Args:
         random_predict ([type]): функция угадывания
@@ -39,10 +42,12 @@ def score_game(random_predict) -> int:
     for number in random_array:
         count_ls.append(random_predict(number))
 
-    score = int(np.mean(count_ls))
-    print(f"Ваш алгоритм угадывает число в среднем за: {score} попытки")
+    print(f'Среднее число попыток {int(np.mean(count_ls))}')   # Ожидаемо 6
+    print(f'Максимальное количество попыток {max(count_ls)}')  # Ожидаемо 8
+    print(f'Минимальное количество попыток {min(count_ls)}')   # Ожидаемо 1
+
     
     
-print('Run benchmarking for game_core_v3: ', end='')
+print('Run benchmarking for game_core_v3: ')
 score_game(game_core_v3)
 
